@@ -28,7 +28,15 @@
 </head>
 <body>
     <div class="container">
-    <h1>Header</h1>
+     <h1>
+        <?php
+        if (isset($tituloHeader)) {
+            echo $tituloHeader;
+        } else {
+            echo "Header";
+        }
+        ?>
+    </h1>   
 
     <?php if (!isset($ocultarLogin)) { ?>
         <form action="logins.php" method="post" class="form">
